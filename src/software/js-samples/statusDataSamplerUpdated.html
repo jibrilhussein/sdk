@@ -153,6 +153,8 @@
                 diagnosticSource = document.getElementById("diagnosticSource");
                 startDate = document.getElementById("startDate");
                 endDate = document.getElementById("endDate");
+                
+                populateInterface();
 
                 document.getElementById("show").addEventListener("click", function(event) {
                     event.preventDefault();
@@ -179,7 +181,6 @@
                     document.getElementById("table-container").setAttribute("style", "display:block;");
                     showStatusData(getSearchObject(deviceId, engineTypeId, diagnosticCodeId, diagnosticSourceId, dateRange));
                 });
-                populateInterface();
             });
 
             function showStatusData(searchObject) {
